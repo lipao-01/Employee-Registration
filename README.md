@@ -30,9 +30,9 @@ This option has the function of registering your employee and showing him in the
 
 
 ### Option 2
-This option allows you to edit the employee's line by choosing the ID.
+This option allows you to change one of the three columns, or all of them, choosing by the row ID of each employee.
 
-![image](https://github.com/user-attachments/assets/cd19e654-aca1-4b9e-8755-4ae5596c0b55)
+![image](https://github.com/user-attachments/assets/34f13517-6bab-40c1-8c8b-b7e6dd816f4b)
 
 
 
