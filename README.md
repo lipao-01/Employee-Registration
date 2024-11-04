@@ -40,7 +40,7 @@ This option allows you to change one of the three columns, or all of them, choos
 ### Option 3
 This option allows you to delete the employee's line also choosing by ID.
 
-![image](https://github.com/user-attachments/assets/d8253fe7-39f3-4ef5-864b-02deb9ce8680)
+![image](https://github.com/user-attachments/assets/1f49c3ec-c8d7-4b1f-9784-1c74c76a6990)
 
 
 
