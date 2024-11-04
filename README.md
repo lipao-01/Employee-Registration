@@ -46,7 +46,7 @@ This option allows you to delete the employee's line also choosing by ID.
 
 
 ### Option 4
-closes the program saving all edits made which can be found in this file, created when the program is started for the first time.
+Closes the program saving all edits made which can be found in this file, created when the program is started for the first time.
 
 ![image](https://github.com/user-attachments/assets/c205b143-c497-42ce-adf4-b6959fcffe10)
 
