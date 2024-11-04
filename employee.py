@@ -7,7 +7,7 @@ import os
 
 # initializing our employee class
 class Employee:
-    def __init__(self, name, area, wage):
+    def __init__(self, name = '-', area = '-', wage = 0):
         # Initializes the properties of the employee: name, area, and wage
         self.name = name
         self.area = area
@@ -111,17 +111,34 @@ class System:
             if 1 <= edit <= len(self.data):
                 print(f'Current data: {self.data[edit - 1]}')
 
-                # Prompts user for new employee data
-                name = str(input('Enter the new employee name: ')).title()
-                area = str(input('Enter the new employee area: ')).upper()
-                wage = float(input('Enter the new employee wage: '))
+                column = int(input('Which column do you want to edit? [1 - Name/ 2 - Area/ 3 - Wage/ 4 - All] '))
 
-                # Updates the employee data in the list
-                self.data[edit - 1] = [edit, name, area, f'R$ {wage:,.2f}']
+                # Prompts user for new employee data
+                if column == 1:
+                    name = str(input('Enter the new employee name: ')).title()
+                    self.data[edit-1][1] = name
+                    self.save_data()
+                elif column == 2:
+                    area = str(input('Enter the new employee area: ')).upper()
+                    self.data[edit-1][2] = area
+                elif column == 3:
+                    wage = float(input('Enter the new employee wage: '))
+                    self.data[edit-1][3] = f'R$ {wage:,.2f}'
+                elif column == 4:
+                    name = str(input('Enter the new employee name: ')).title()
+                    area = str(input('Enter the new employee area: ')).upper()
+                    wage = float(input('Enter the new employee wage: '))
+                    self.data[edit - 1] = [edit, name, area, f'R$ {wage:,.2f}']
+                else:
+                    print('\033[31mOption invalid!\033[m')
+                    return
+
+
                 self.save_data()  # Saves data after editing
                 print('\033[32mEmployee data updated successfully!\033[m')
             else:
                 print('Invalid ID. Please enter a valid ID.')
+
 
     def delete(self):
         # Deleting method for removing an employee from the data
@@ -135,7 +152,7 @@ class System:
             if confirm == 'Y':
                 self.data.pop(delete_id - 1)  # Removes the employee from the list
                 self.save_data()  # Saves data after deletion
-                print(f'Employee {remove_employee} has been removed.')
+                print(f'\033[31mEmployee {remove_employee} has been removed.\033[m')
             else:
                 print('Employee deletion canceled.')
         else:
